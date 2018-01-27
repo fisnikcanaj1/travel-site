@@ -1,8 +1,21 @@
 {
   "name": "travel-site",
   "version": "1.0.0",
+  "author": "Fisnik Canaj",
+  "scripts": {
+    "start": "gulp"
+  },
   "dependencies": {
+    "gulp-watch": "^5.0.0",
     "jquery": "^3.3.1",
     "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "auto-prefixer": "^0.4.2",
+    "autoprefixer": "^7.2.5",
+    "gulp": "^3.9.1",
+    "gulp-error-handle": "^1.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0"
   }
 }
