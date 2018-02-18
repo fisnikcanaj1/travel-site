@@ -14,7 +14,10 @@
     "auto-prefixer": "^0.4.2",
     "autoprefixer": "^7.2.5",
     "gulp": "^3.9.1",
+    "gulp-compress": "0.0.9",
     "gulp-error-handle": "^1.0.0",
+    "gulp-image": "^4.3.0",
+    "gulp-minifier": "^1.1.0",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0"
   }

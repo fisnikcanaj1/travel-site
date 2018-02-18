@@ -12,6 +12,9 @@ gulp.task('watch', function () {
     watch('./app/assets/scss/**/*.scss', function () {
         gulp.start('sass');
     });
+    watch('./app/assets/img/**/*', function(){
+        gulp.start('image');
+    });
 });
 
-gulp.task('default', ['watch', 'sass', 'html']);
+gulp.task('default', ['watch', 'sass', 'html', 'image', 'js'])

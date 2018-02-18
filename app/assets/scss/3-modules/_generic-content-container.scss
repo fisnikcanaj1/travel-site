@@ -1,0 +1,19 @@
+.generic-content-container {
+
+    p {
+        line-height: 1.5;
+        font-size: 1.0rem;
+        margin: 1.8rem 0;
+        font-weight: 300;
+        
+        @include at-medium {
+             line-height: 1.65;
+             font-size: 1.125rem;
+             margin: 1.8rem 0;
+        }
+    }
+
+    p a {
+        font-weight: 700;
+    }
+}
