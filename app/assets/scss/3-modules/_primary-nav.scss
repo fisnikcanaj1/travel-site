@@ -1,0 +1,50 @@
+.primary-nav {
+
+    line-height: 1;
+    
+    @include at-medium {
+        line-height: 42px;
+    }
+
+    &--pull-right {
+        @include at-medium {
+            float: right;
+        }
+    }
+
+    ul {
+        margin: 15px 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        @include at-medium {
+            margin: 0 0 0 0;
+        }
+    }
+
+    li {
+        padding-right: 13px;
+        list-style-type: none;
+        text-align: center;
+        
+        @include at-medium {
+            float: left;
+            margin-top: 0px;
+        }
+    }
+
+    a {
+        color: $bg-color;
+        font-weight: 300;
+        text-decoration: none;
+        padding: 5px 8px;
+        font-size: .8rem;
+        background: rgba($primary-color, 0.5);
+
+        @include at-medium {
+            background: transparent;
+            font-size: 1rem;
+        }
+    }
+}

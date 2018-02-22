@@ -1,0 +1,124 @@
+.site-header {
+    position: absolute;
+    z-index: 2;
+    width: 100%; 
+    transition: all 0.3s ease-out;
+
+    @include at-medium {
+        padding: 10px 0;
+        background-color: rgba($primary-color, 0.3);
+    }
+
+    &--is-expended {
+        background-color: rgba($primary-color, 0.55);
+        
+    }
+
+
+    &__btn-container {
+        text-align: center;
+        
+        @include at-medium {
+            float: right;
+        }        
+    }
+
+    &__menu-icon {
+        height: 19px;
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: block;
+        z-index: 10;
+
+        &__middle,
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $bg-color;
+            transition: all 0.3s ease-out;
+        }
+
+        
+        &::before {
+            top: 0px;
+            transform-origin: 0 0;
+        }
+        
+        &__middle {
+            top: 8px;
+        }
+
+        &::after {
+            bottom: 0;
+            transform-origin: 0 100%;
+        }
+
+        @include at-medium {
+            display: none;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(.8);
+        transform-origin: 50% 0%;
+        background-color: $primary-color;
+        padding: 25px 36px;
+
+        @include at-medium {
+            left: auto;
+            transform: translateX(0);
+        }
+    }
+
+    &__menu-icon--close-x {
+
+
+
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+        }
+
+        .site-header__menu-icon__middle {
+            transform: scaleX(0);
+            opacity: 0;
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+        }
+    }
+
+    &__menu-content {
+        padding-top: 104px;
+        transform: scale(1.2); 
+        text-align: center;
+        z-index: -10;
+        position: relative;
+        float: none;
+        opacity: 0;
+        transition: all .3s ease-out; 
+        
+        @include at-medium {
+            opacity: 1;
+            z-index: 1;
+            padding-top: 0;
+            transform: scale(1);
+        }
+
+        &--is-visible {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+        }
+    }
+
+}

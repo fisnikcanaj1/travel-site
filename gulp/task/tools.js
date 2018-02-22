@@ -4,7 +4,6 @@ const gulp = require('gulp'),
     autoPrefixer = require('autoprefixer'),
     errorHendler = require('gulp-error-handle'),
     image = require('gulp-image'),
-    // uglify = require('gulp-uglify'),
     minify = require('gulp-minifier');
 
 gulp.task('styles', function () {
@@ -20,12 +19,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest("./app/assets/css"));
 });
 
-gulp.task('image', function () {
-    gulp.src('./app/assets/img/**/*')
-        .pipe(image())
-        .pipe(gulp.dest('./app/temp/img'));
-});
-
 gulp.task('html', function () {
     gulp.src('./app/assets/*.html').pipe(minify({
         minify: true,
@@ -37,7 +30,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('js', function () {
-    gulp.src('./app/assets/js/*').pipe(minify({
+    gulp.src('./app/assets/js/App.js').pipe(minify({
         minify: true,
         minifyJS: {
             sourceMap: true
@@ -45,3 +38,8 @@ gulp.task('js', function () {
     })).pipe(gulp.dest('./app/temp/js'));
 });
 
+gulp.task('image', function () {
+    gulp.src('./app/assets/img/**/**/*')
+        .pipe(image())
+        .pipe(gulp.dest('./app/temp/img'));
+});

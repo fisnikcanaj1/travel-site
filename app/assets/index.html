@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <title>Clear View Escapes</title>
+    <meta name="author" content="Fisnik Canaj">
     <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
     <meta name="description" content="Your clarify. One trip away. We create soul restoring journeys that inspire you to be you.">
 
@@ -14,22 +15,35 @@
 </head>
 
 <body>
-    <header>
-        <img src="img/icons/clear-view-escapes.svg">
-        <a href="#" class="btn">Get in Touch</a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#our-beginning">Our Beginning</a>
-                </li>
-                <li>
-                    <a href="#features">Features</a>
-                </li>
-                <li>
-                    <a href="#testimonials">Testimonials</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="wrapper">
+            <div class="site-header__logo">
+                <img src="img/icons/clear-view-escapes.svg">
+            </div>
+            
+            <div class="site-header__menu-icon">
+                <div class="site-header__menu-icon__middle"></div>
+            </div>
+ 
+            <div class="site-header__menu-content">
+                <div class="site-header__btn-container">
+                    <a href="#" class="btn">Get in Touch</a>
+                </div>
+                <nav class="primary-nav primary-nav--pull-right">
+                    <ul>
+                        <li>
+                            <a href="#our-beginning">Our Beginning</a>
+                        </li>
+                        <li>
+                            <a href="#features">Features</a>
+                        </li>
+                        <li>
+                            <a href="#testimonials">Testimonials</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>  
     </header>
 
     <div class="large-hero">
@@ -55,9 +69,11 @@
 
     <div id="our-beginning" class="page-section">
         <div class="wrapper">
-            <h2 class="headline headline--centered headline--light">The first trip we <strong>was our own.</strong></h2>
+<h2 class="headline headline--centered headline--light">The first trip we planned
+    <strong>was our own.</strong>
+</h2>
             <h3 class="headline headline--centered headline--small headline--orange headline--narrow headline--light headline--b-margin-small headline--t-margin-small">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
-            <div class="wrapper wrapper--medium wrapper--b-margin">
+            <div class="wrapper wrapper--medium wrapper--no-padding-until-medium wrapper--b-margin">
                 <img sizes="(min-width: 970px) 976px, 100vw" srcset="img/first-trip-low-res.jpg 565w, img/first-trip.jpg 976w, img/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
             </div>
 
@@ -128,15 +144,18 @@
     </div>
 
     <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials">
+
+        <div class="wrapper">
+                <h2 class="section-title section-title--blue">
+                    <img class="section-title__icon" src="img/icons/comment.svg"> Real
+                    <strong>Testimonials</strong>
+                </h2>
+        </div>
+            
         <div class="wrapper wrapper--no-padding-until-medium">
-            <h2 class="section-title section-title--blue">
-                <img class="section-title__icon" src="img/icons/comment.svg"> Real
-                <strong>Testimonials</strong>
-            </h2>
-    
-            <div class="row row--gutters row--equal-height-at-large row--gutters-small row--t-padding generic-content-container">
+            <div class="row row--gutters row__full-height row--equal-height-at-large row--gutters-small generic-content-container">
                 <div class="row__large-4">
-                    <div class="testimonial">
+                    <div class="testimonial ">
                         <div class="testimonial__photo">
                             <img sizes="160px" srcset="img/testimonial-jane.jpg 160w, img/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
                         </div>
@@ -179,11 +198,15 @@
         </div>
     </div>
 
-    <footer>
-        <p>Copyright &copy; 2016 Clear View Escapes. All rights reserved.
-            <a href="#" class="btn btn--orange">Get in Touch 1</a>
-        </p>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>
+                <span class="site-footer__text">Copyright &copy; 2018 Clear View Escapes. All rights reserved.
+                </span><a href="#" class="btn btn--orange">Get in Touch</a>
+            </p>
+        </div>
     </footer>
+    <script src="js/App.js"></script>
 </body>
 
 </html>
