@@ -10,10 +10,16 @@
     }
 
     &--is-expended {
-        background-color: rgba($primary-color, 0.55);
-        
+        background-color: rgba(23, 51, 72, .85);
     }
+    
+    @include at-medium {
+        position: fixed;
 
+        &--dark {
+            background-color: rgba($black, 0.55);
+        }
+    }
 
     &__btn-container {
         text-align: center;
@@ -74,16 +80,19 @@
         transform-origin: 50% 0%;
         background-color: $primary-color;
         padding: 25px 36px;
-
+        transition: 0.5s all ease-out;
+        
         @include at-medium {
             left: auto;
             transform: translateX(0);
+            
+            .site-header--dark & {
+                transform: scale(0.545);
+            }
         }
     }
 
     &__menu-icon--close-x {
-
-
 
         &::before {
             transform: rotate(45deg) scaleX(1.25);
