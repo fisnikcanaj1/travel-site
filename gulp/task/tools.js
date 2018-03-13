@@ -15,7 +15,7 @@ gulp.task('styles', function () {
 gulp.task('sass', function () {
     gulp.src('./app/assets/scss/**/*.scss')
         .pipe(errorHendler())
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(sass())
         .pipe(gulp.dest("./app/assets/css"));
 });
 
@@ -29,14 +29,7 @@ gulp.task('html', function () {
     })).pipe(gulp.dest('./app/temp/'));
 });
 
-gulp.task('js', function () {
-    gulp.src('./app/assets/js/App.js').pipe(minify({
-        minify: true,
-        minifyJS: {
-            sourceMap: true
-        }     
-    })).pipe(gulp.dest('./app/temp/js'));
-});
+
 
 gulp.task('image', function () {
     gulp.src('./app/assets/img/**/**/*')
